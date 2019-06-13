@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{relsize}
+\usepackage{bbold}
+\usepackage{mathtext}
+\usepackage{pdfpages}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ top=25mm,
+ bottom=25mm,
+ right=20mm,
+ }
+
+\begin{document}
+First, the single spin operators represented in the spin product basis,
+basically. This can be thought of as $\hat{s}_{x}\otimes \hat{1} $:
+\begin{equation}
+S(x,1) = 
+\begin{bmatrix}
+0                  & \frac{1}{\sqrt{2}} & 0\\
+\frac{1}{\sqrt{2}} & 0                 & \frac{1}{\sqrt{2}} \\ 
+0                  & \frac{1}{\sqrt{2}} & 0
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+S(y,1) = 
+\begin{bmatrix}
+0                  & \frac{i}{\sqrt{2}} & 0\\
+\frac{-i}{\sqrt{2}} & 0                 & \frac{-i}{\sqrt{2}} \\ 
+0                  & \frac{i}{\sqrt{2}} & 0
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+S(z,1) = 
+\begin{bmatrix}
+-1                  & 0 & 0\\
+0 & 0               & 0    \\ 
+0                   &   & 1
+\end{bmatrix}
+\end{equation}
+Now for the product operators, $\hat{s}_{i}\otimes\hat{s}_{j}$, represented in the
+spin product basis.
+\begin{equation}
+S_{xx} = 
+\begin{bmatrix}
+\frac{1}{2} & 0  & \frac{1}{2} \\ 
+0           & 1 & 0\\
+\frac{1}{2} & 0  & \frac{1}{2} 
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+s_{xy} = 
+\begin{bmatrix}
+\frac{-i}{2} & 0  & \frac{i}{2} \\ 
+0           & 1 & 0\\
+\frac{-i}{2} & 0  & \frac{i}{2} 
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+S_{xz} = 
+\begin{bmatrix}
+0           & 0 & 0\\
+\frac{1}{2} & 0  & \frac{1}{2} \\ 
+0           & 0 & 0\\
+\end{bmatrix}
+\end{equation}
+
+
+\begin{equation}
+s_{yx}
+\begin{bmatrix}
+\frac{i}{2} & 0  & \frac{i}{2} \\ 
+0           & 1 & 0\\
+\frac{-i}{2} & 0  & \frac{-i}{2} 
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+s_{yy} = 
+\begin{bmatrix}
+0           & 0 & 0\\
+\frac{1}{2} & 0  & \frac{1}{2} \\ 
+0           & 0 & 0\\
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+s_{yz} = 
+\begin{bmatrix}
+0           & 0 & 0\\
+\frac{1}{2} & 0  & \frac{1}{2} \\ 
+0           & 0 & 0\\
+
+
+\frac{1}{2}  & 0  & \frac{-1}{2} \\ 
+0            & 1  & 0\\
+\frac{-1}{2} & 0  & \frac{1}{2} 
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+s_{zx}
+\begin{bmatrix}
+\frac{i}{2} & 0  & \frac{i}{2} \\ 
+0           & 1 & 0\\
+\frac{-i}{2} & 0  & \frac{-i}{2} 
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+s_{zy} = 
+\begin{bmatrix}
+0     &  \frac{-i}{\sqrt{2}} & 0 \\ 
+0     & 0                    & 0 \\
+0     &  \frac{-i}{\sqrt{2}} & 0 \\
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+s_{zz} = 
+\begin{bmatrix}
+1     & 0 & 0\\
+0     & 0 & 0 \\ 
+0     & 0 & 1\\
+\end{bmatrix}
+\end{equation}
+
+
+
+\end{document}

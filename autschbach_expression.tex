@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{relsize}
+\usepackage{bbold}
+\usepackage{mathtext}
+\usepackage{pdfpages}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ top=25mm,
+ bottom=25mm,
+ right=20mm,
+ }
+
+\begin{document}
+\noindent \emph{Note : Adapted from B. Martin, J. Autschbach, J. Chem. Phys., 142(5), 054108, 2015 } \\
+
+\noindent The expression for the total shielding for a triplet is
+\begin{equation}
+\sigma = \sigma^{orb} - \frac{\beta_{e}}{g_{N}\beta_{N}}\frac{1}{k_{B}T} \mathbf{g}\mathbf{Z}\mathbf{A}
+\label{eqn:totalshieldingtriplet}
+\end{equation}
+where $\sigma^{orb}$ is the orbital shielding (defined as the only non-zero contribution to the shielding for a diagmagnetic molecule), $\beta_{e}$ the Bohr magneton, $\beta_{N}$ the nuclear magneton,
+$k_{B}$ the Boltzman constant, $T$ the temperature, $\mathbf{g}$ the g-matrix, $\mathbf{A}$ the hyperfine matrix, and $\mathbf{Z}$ the Z-matrix, the
+definition of which shall be discussed below.\\
+
+\noindent It is assumed that $\mathbf{g}$ and $\mathbf{Z}$ have the same principle axes, however, the hyperfine tensor $\mathbf{A}$
+may have different principal axes, i.e.,
+\begin{equation}
+\mathbf{g}\mathbf{Z}\mathbf{A} = 
+\begin{bmatrix}
+g_{\perp} & 0          & 0 \\
+0         & g_{\perp}  & 0 \\
+0         & 0          & g_{\parallel} 
+\end{bmatrix}
+\begin{bmatrix}
+Z_{\perp} & 0          & 0 \\
+0         & Z_{\perp}  & 0 \\
+0         & 0          & Z_{\parallel} 
+\end{bmatrix}
+\begin{bmatrix}
+A_{11} & A_{12}  & A_{13} \\
+A_{21} & A_{22}  & A_{23} \\
+A_{31} & A_{32}  & A_{33} 
+\end{bmatrix}
+\end{equation}
+The expression for the isotropic contributions to the paramagnetic shielding is split up into a contact and pseudocontact part; 
+$\sigma_{iso}^{P} = \sigma_{iso}^{c}+\sigma_{iso}^{pc}$, which may be written as 
+\begin{equation}
+\sigma_{iso}^{c} = \frac{\beta_{e}A_{iso}}{3 T g_{n} \beta_{N} }[g_{iso}(Z_{\parallel}+2Z_{\perp})+2\Delta g (Z_{\parallel}-Z_{\perp})]
+\end{equation}
+\noindent In an axial system the energies can be shifted so that when represented in the principal axes the zero-field splitting matrix has the form
+\begin{equation}
+\begin{bmatrix}
+0 & 0  & 0 \\
+0         & 0  & 0 \\
+0         & 0  & D
+\label{eqn:axiald}
+\end{bmatrix}
+\end{equation}
+\noindent The energies of the three states in the triplet are then $\{D, 0, D\}$. The components of $\mathbf{Z}$ are then given by
+\begin{equation}
+Z_{\parallel} = \frac{2 e^{-\beta D}}{1+2e^{-\beta D}}
+\label{eqn:zparalleltriplet}
+\end{equation}
+\begin{equation}
+Z_{\perp} = \frac{\frac{2}{\beta D} (1-e^{-\beta D})}{1+2e^{-\beta D}}
+\label{eqn:zperptriplet}
+\end{equation}
+Here, $D$ is the energy gap between the singlet and doublet single states which comprise the triplet.
+The denominator is the partition function. The sign of $D$ can in principal be positive or negative. However, in such cases it is perhaps
+simpler to chose an energy shift such that the energy of the states is $\{0, D, 0\}$, leading to the following expressions for components of $\mathbf{Z}$
+\begin{equation}
+Z_{\parallel} = \frac{2}{2+e^{-\beta D}}
+\label{eqn:zparalleltripletnegative}
+\end{equation}
+\begin{equation}
+Z_{\perp} = \frac{\frac{2}{\beta D} (e^{-\beta D} -1 )}{2+e^{-\beta D}}
+\label{eqn:zperptripletnegative}
+\end{equation}
+With these definitions 
+\noindent Using these expressions, expanding the exponential in powers of T, and only taking terms of $\mathcal{O}(T^{3})$ and lower
+yields the following expressions for the contact and pseudo-contact contributions to the paramagnetic shielding:
+\begin{equation}
+\sigma^{c}_{iso} = C_{iso}A_{iso}  \left[ 2g_{iso}\beta - \frac{2}{3}D\Delta g\beta^{2} - \frac{1}{9}D^{2}g_{iso}\beta^{3} \right]
+\label{eqn:contacttriplet}
+\end{equation}
+\begin{equation}
+\sigma^{pc}_{iso} = C_{iso}\Delta A_{iso} \left{[} 4 \Delta g\beta - \frac{2}{3}D(g_{iso}+\Delta g) \beta^{2} - \frac{2}{9}D^{2}\Delta g_{iso}\beta^{3}
+\label{eqn:pseudocontacttriplet}
+\end{equation}
+
+
+
+\noindent For cases where the rhombic parameter, $E$, is non-zero, the orientation and energy shift may be chosen such that the zfs matrix 
+has the form
+\begin{equation}
+\begin{bmatrix}
+\frac{-D}{3}+E & 0               & 0 \\
+0              & \frac{-D}{3}-E  & 0 \\
+0              & 0               & \frac{2D}{3}
+\end{bmatrix}
+\label{eqn:rhombicd}
+\end{equation}
+Using a similar logic as to derive the expressions in the axial case, the components of $\mathbf{Z}$ for a rhombic 
+system are given by
+\begin{equation}
+Z_{11} = \frac{\frac{2}{\beta (D+E)}(1-e^{\beta (D+E)})}
+{1+e^{-\beta (D-E)}+ e^{-\beta (D+E)} }
+\label{eqn:z11rhombic}
+\end{equation}
+\begin{equation}
+Z_{22} = \frac{\frac{2}{\beta (D-E)}(1-e^{\beta (D-E)})}
+{1+e^{-\beta (D-E)}+ e^{-\beta (D+E)} }
+\label{eqn:z22rhombic}
+\end{equation}
+\begin{equation}
+Z_{33} = \frac{\frac{1}{\beta E}(e^{\beta (D-E)} - e^{\beta (D+E)})}
+{1+e^{-\beta (D-E)}+ e^{-\beta (D+E)} }
+\label{eqn:z33rhombic}
+\end{equation}
+
+
+\end{document}
