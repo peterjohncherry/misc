@@ -23,8 +23,236 @@
  }
 
 \begin{document}
-First, the single spin operators represented in the spin product basis,
-basically. This can be thought of as $\hat{s}_{x}\otimes \hat{1} $:
+\noindent Suppose we have two unpaired electrons. The two-particle Hilbert space spanned by
+
+\begin{equation}
+|s_{1}m_{1}\rangle \otimes | s_{2}m_{2} \rangle = | s_{1}m_{1}, s_{2}m_{2} \rangle,
+\end{equation}
+
+\noindent the RHS is just a short hand of writing one of the vectors formed from the product $\otimes$. From now on this will be referred to as the \emph{product basis} . \\
+
+\noindent The particles have spin operators denoted $\hat{S}_{1}$ and $\hat{S}_{2}$. The product
+states satisfy
+
+\noindent As $m_{1}  \text{and} m_{2} = \pm \frac{1}{2} $, we shall use the further shorthand, e.g.,
+the product state for $s_{1,2} = \frac{1}{2}$, $m_{1} = +\frac{1}{2}$ and $m_{2} = -\frac{1}{2} $ 
+will be written
+\begin{equation}
+|+-\rangle = | \frac{1}{2}\frac{1}{2},\frac{1}{2}\frac{-1}{2} \rangle
+\end{equation}
+\begin{equation}
+S^{2}_{i}|s_{1}m_{1}, s_{2}m_{2} \rangle = \hbar^{2}s_{i}(s+1)|s_{1}m_{1}, s_{2}m_{2} \rangle
+\end{equation}
+\noindent The total angular momentum operator, $\mathbf{S}$, is defined 
+\begin{equation}
+\mathbf{S} = \mathbf{S}_{1}+\mathbf{S}_{2}
+\end{equation}
+We want to find the eigenvalues of $S_{z}$ and $S^{2}$ in this basis. First, look at
+$S_{z}$.
+\begin{equation}
+S_{z}|++\rangle =
+(S_{1z}+S_{2z})|++ = (\frac{\hbar}{2} + \frac{\hbar}{2}) | ++ rangle = |++\rangle
+\end{equation}
+\begin{equation}
+S_{z}|++\rangle =
+(S_{1z}+S_{2z})|++ = (\frac{-\hbar}{2} + \frac{\hbar}{2}) | -+ rangle = 0
+\end{equation}
+\begin{equation}
+S_{z}|++\rangle =
+(S_{1z}+S_{2z})|++ = (\frac{\hbar}{2} + \frac{-\hbar}{2}) | +- rangle = 0
+\end{equation}
+\begin{equation}
+S_{z}|++\rangle = 
+(S_{1z}+S_{2z})|++ = (\frac{-\hbar}{2} + \frac{-\hbar}{2}) | -- \rangle = | -- \rangle
+\end{equation}
+So the representation of $\mathbf{S}_{z}$ in the product basis is
+\begin{equation}
+[S_{z}]_{\{|1,2\rangle\}} = 
+\begin{bmatrix}
+1                  & 0 & 0 & 0 \\
+0                  & 0 & 0 & 0 \\
+0                  & 0 & 0 & 0 \\
+0                  & 0 & 0 & -1 
+\end{bmatrix}
+\end{equation}
+where the $\hbar$ has been omitted for convenience.\\
+
+\noindent Now consider the $S^{2}$ operator. 
+\begin{equation}
+S^{2} = (\mathbf{S}_{1}+\mathbf{S}_{2})\cdot (\mathbf{S}_{1}+\mathbf{S}_{2})= 
+S^{2}_{1}+S^{2}_{2} + 2\mathbf{S}_{1}\cdot \mathbf{S}_{2}
+\end{equation}
+\noindent Unfortunately, the product states are not eigenfunctions of $S^{2}$. This
+leads us to construct the following basis:
+\begin{equation*}
+\frac{|+-\rangle - | -+ \rangle}{\sqrt{2}}
+\end{equation*}
+\\
+\begin{equation*}
+|++\rangle
+\end{equation*}
+\begin{equation*}
+\frac{|+-\rangle - | -+ \rangle}{\sqrt{2}}
+\end{equation*}
+\begin{equation*}
+|--\rangle
+\end{equation*}
+\noindent I'll refer to this as the "ST basis". The question is now which of these two bases should we use. If 
+we are interested in and operator, $\hat{V}^{(+)}$ of the form,
+\begin{equation}
+\hat{V}^{(+)} = -(v^{(+)}_{1}\mathbf{S}_{1} + v^{(+)}_{2}\mathbf{S}_{2}) \cdot \mathbf{B}
+\end{equation}
+this indicates non-interacting spins, hence it makes sense to use the product basis.
+However, if we have and operator $\hat{V}^{\times}$, corresponding to 
+interacting spins
+\begin{equation}
+\hat{V}^{\times} = v^{\times}\mathbf{S}_{1}\cdot\mathbf{S}_{2}
+\end{equation}
+then it makes send to use the ST basis.\\
+
+\noindent Soncini provides a basis of matrices which may be used to represent 
+the representation of an operator in the above bases. To understand how
+this basis is constructed, it is useful to recap the addition of angular momentum,
+and how bases such as those above can be transformed into one another. 
+
+\section{Addition of classical angular momentum}
+Consider adding two angular momenta, and the associated product states. As
+with spin we have
+\begin{equation}
+J_{z}|j_{1}m_{1} \rangle = (m_{1}+m_{2})|j_{1}m_{1}, j_{2}m_{2} \rangle
+\end{equation}
+Note that his is going to be degenrate, as multiple combinations of $m_{1}$ and $m_{2}$
+can result in the same eigenvalue. Within each of these degenerate eigenspaces 
+(which can be thought of corresponding to spin multiplets) we want to chose a 
+basis which consists solely of eigenvectors of $J^{2}$.\\
+
+\noindent If $j_{1}\geq j_{2}$, then the value of the total angular momentum $j$ can
+take on values 
+\begin{equation}
+(j_{1}+j_{2}-1), (j_{1}+j_{2}-2), ... , (j_{1}-j_{2})
+\end{equation}
+\noindent So the total number of states in this basis is $(2j_{1}+1)(2j_{2}+1)$.
+In fact we can state that the tensor product space $j_{1}\otimes j_{2}$ can
+be represented as a sum of spaces, each of which is associated with one the 
+eigenvalues stated above, i.e.,
+\begin{equation}
+j_{1}\otimes j_{2} =
+(j_{1}+j_{2})\oplus
+(j_{1}+j_{2}-1)\oplus
+...
+(j_{1}-j_{2})
+\end{equation}
+The states within each one of these degenerate subspaces are
+\begin{equation}
+|JM, j_{1}j_{2} \rangle 
+\text{ \ \ where \ \ } (j_{1}+j_{2}) \geq j \geq (j_{1}-j_{2})
+\text{ \ \ and \ \  } j\geq m \geq -j
+\end{equation}
+Now we can consider which states exist in each one of these degenerate subspaces
+\begin{table}[]
+\begin{tabular}{@{}llllll@{}}
+\hline
+\multicolumn{1}{l||}{}     & \multicolumn{1}{l|}{$J=j_{1}+j_{2}$} & \multicolumn{1}{l|}{$J=j_{1}+j_{2}-1$}      & \multicolumn{1}{l|}{$J=j_{1}+j_{2}-2$} & \multicolumn{1}{l}{$J=j_{1}+j_{2}-3$} \\
+\hline\hline
+\multicolumn{1}{l||}{m=3}  & \multicolumn{1}{l|}{$|3,3\rangle$}  &  \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{m=2}  & \multicolumn{1}{l|}{$|3,2\rangle $} &  \multicolumn{1}{l|}{$|2,2\rangle$ }           & \multicolumn{1}{l|}{}               & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{m=1}  & \multicolumn{1}{l|}{$|3,1\rangle $} &  \multicolumn{1}{l|}{$|2,1\rangle$ }           & \multicolumn{1}{l|}{$|1,1\rangle $} & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{m=0}  & \multicolumn{1}{l|}{$|3,0\rangle $} &  \multicolumn{1}{l|}{$|2,0\rangle$ }           & \multicolumn{1}{l|}{$|1,0\rangle $} & \multicolumn{1}{l}{$|0,0\rangle $}  \\
+\multicolumn{1}{l||}{M=-1} & \multicolumn{1}{l|}{$|3,-1\rangle$} & \multicolumn{1}{l|} {$|2,-1\rangle$ }          & \multicolumn{1}{l|}{$|1,-1\rangle$} & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{M=-2} & \multicolumn{1}{l|}{$|3,-2\rangle$} & \multicolumn{1}{l|} {$|2,-2\rangle$ }          & \multicolumn{1}{l|}{}               & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{M=-3} & \multicolumn{1}{l|}{$|3,-3\rangle$} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{}  & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{} 
+\end{tabular}
+\end{table}
+Or, when applied to the $j_{1} = j_{2} = \frac{1}{2}$ case we have
+\begin{table}[]
+\begin{tabular}{@{}llllll@{}}
+\hline
+\multicolumn{1}{l||}{}     &   \multicolumn{1}{l|}{$J= 1 $} & \multicolumn{1}{l}{$J=0$} \\
+\hline\hline
+\multicolumn{1}{l||}{m=1}  &    \multicolumn{1}{l|}{$|1,1\rangle $} & \multicolumn{1}{l}{}              \\
+\multicolumn{1}{l||}{m=0}  &    \multicolumn{1}{l|}{$|1,0\rangle $} & \multicolumn{1}{l}{$|0,0\rangle $}  \\
+\multicolumn{1}{l||}{M=-1} &     \multicolumn{1}{l|}{$|1,-1\rangle$} & \multicolumn{1}{l}{}              \\
+\end{tabular}
+\end{table}
+It must be possible to obtain these states (which have a good value of $J^{2}$)
+via some transformation of the states in the product basis. We can see that for
+the $|S=1,M=1\rangle$ state in the product basis is the same as the state in
+the ST basis. We can now generate the other states via use of the ladder
+operators on this high spin state, i.e.,
+\begin{equation*}
+\hat{S}_{-} | 1,1\rangle = \frac{1}{\sqrt{2}}|1,0\rangle 
+\end{equation*}
+\begin{equation*}
+= (\hat{s}_{1-}+\hat{s}_{2-}) | 1,1\rangle = \frac{1}{\sqrt{2}}(|+-\rangle + |-+\rangle)
+\end{equation*}
+acting again with the ladder operator yields
+\begin{equation}
+S_{-1}|S=1,M=0\rangle  = |--\rangle
+\end{equation}
+Whilst this proeedure is done for the simple case of two similar spins of $\frac{1}{2}$, is it can
+be applied generally to any angualr momenta, and hence may be applied recursively to build up
+systems of more than two couple momenta. For example, the appropriate basis for three coupled spins can be 
+obtained by first constructing the ST basis for two coupled spins, and then coupling a further third
+spin to the states in this ST basis.\\
+
+\noindent A side note is that the choice of phase for these spins can alter the sign resulting 
+from application of the ladder operators. It is important to bear this in mind, but generally, the
+phase is chose so that the signs yielded are those shown above.\\
+
+\noindent We now need to consider $|S=0, M=0\rangle$. This can be obtained by noting 
+it must be orthogonal to the above defined states. By convention, it is also chosen such that it
+has real coefficients (I don't know if this convention has any significant ramifications, or requires justificaiton).
+We also require it to be normalized to 1. Orthogonality to $|++\rangle$ and $|--\rangle$ means
+the state must be written as some combination
+\begin{equation}
+|0,0\rangle = \alpha | +-\rangle +\beta| -+\rangle
+ \text{\ \ \ where \ \ } \alpha+\beta =0
+ \text{ \ \ \ and \ \ \ } \alpha^{2}+\beta^{2} = 1
+\end{equation}
+Solving for $\alpha$ and $\beta$ yields
+\begin{equation}
+|0,0\rangle = \frac{1}{\sqrt{2}} (|+-\rangle - | -+\rangle )
+\end{equation}
+the standard covention is that the coefficient corresponding to the state with
+$m_{1} = j_{1}$ positive for the $|J=0, M=0\rangle$ state. Again this doesn't 
+truly matter, but is important if we want our coefficients to match up 
+with everyone elses.\\
+
+\noindent We can now think about extending this to the general problem, i.e., the case
+where $j_{1}$ and $j_{2}$ take any value (where we chose the indexes so $j_{1} \geq j_{2}$). 
+As before, the state with the highest angular momenta ($J=j_{1}+j_{2}$) is the same as
+can be built out of a single product ket 
+\begin{equation}
+|J= (j_{1}+j_{2}), M=(j_{1}+j_{2})\rangle = | j_{1} =j_{1}, m_{1}=j_{1}; j_{2}=j_{2},m_{2}=j_{2} \rangle 
+\end{equation}
+\noindent  As before we can use the ladder operators to decrease the value of $M$ one step
+\begin{equation}
+|J= (j_{1}+j_{2}), M=(j_{1}+j_{2})\rangle =
+\frac{1}{\hbar}J_{-}|J= (j_{1}+j_{2}), M=(j_{1}+j_{2})\rangle 
+\end{equation}
+\noindent hence
+\begin{equation*}
+| j_{1}+j_{2}, j_{1}+j_{2}-1\rangle
+=\sqrt{\frac{1}{2(j_{1}+j_{2})}}(J_{1-}+J_{2-})|J,M\rangle
+\end{equation*}
+%\begin{equation*}
+%=\sqrt{\frac{1}{2(j_{1}+j_{2})}}(J_{1-}+J_{2-}) (|j_{1}= j_{1},j_{2}=(j_{2}-1)\rangle + |j_{1}=(j_{1}-1),j_{2}=j_{2}\rangle)
+%\end{equation*}
+\begin{equation*}
+J=| j_{1}+j_{2},M= j_{1}+j_{2}-1\rangle
+=\sqrt{\frac{j_{1}}{j_{1}+j_{2}}}  \Bigg|j_{1}= (j_{1}-1) ,j_{2}=j_{2}\Bigg\rangle+
+ \sqrt{\frac{j_{2}}{j_{1}+j_{2}}}  \Bigg|j_{1}= j_{1}   ,j_{2}=(j_{2}-1)\Bigg\rangle
+\end{equation*}
+So we can obtain all the states with $J=j_{1}+j_{2}$, $J \geq  m_{1} \geq -J $ by successively applying the ladder operator
+in this manner.\\
+
+\noindent Now we must move onto states where $J= j_{1}+j_{2}-1$. There are only two product kets from which we may construct the
+coupled basis; those with $| j_{1}=j_{1}, m_{1}=j_{1}; j_{2}=j_{2}, m_{2} = j_{2}-1\rangle $and  
+$| j_{1}=j_{1}, m_{1}=j_{1}-1; j_{2}=j_{2}, m_{2} = j_{2}\rangle$
+
+\section{Appendix}
+First, the  spin operators represented in the spin product basis (these are the matrices
+used by EasySpin).
 \begin{equation}
 S(x,1) = 
 \begin{bmatrix}
