@@ -469,10 +469,10 @@ and $l=2$:
  \end{equation*}
 \begin{equation}
 \Upsilon_{2,0} = \frac{1}{\sqrt{3}}
- \sqrt{\frac{15}{32\pi}}\Bigg( 3 \frac{z^{2}}{r^{2}} -1 \Bigg )
+ \sqrt{\frac{15}{32\pi}}\Bigg( 3 \frac{z^{2}} -1 \Bigg )
 \end{equation}
 \noindent Without loss of generality we can set $r=1$ 
-\footnote{defining the Cartesian basis such that $|\mathbf{x}|^{2}+|\mathbf{y}|^{2}+|\mathbf{z}|^{2}$ }. Furthermore, spherical Harmonics of different 
+\footnote{defining the Cartesian basis such that $|\mathbf{x}|^{2}+|\mathbf{y}|^{2}+|\mathbf{z}|^{2}$ }. Furthermore, spherical harmonics of different 
 l do not mix under transformations, therefore, the factors common to
 all members of a given l can be absorbed into the coefficients, leaving 
 us with the much nicer definitions
@@ -491,9 +491,96 @@ and $l=2$:
 \Upsilon_{2,-1} = -2(x-iy)z 
 \end{equation*}
 \begin{equation}
- \Upsilon_{2,0} =\frac{1}{\sqrt{3}} \Bigg( 3\frac{z^{2}}{r^{2}} -1 \Bigg )
+ \Upsilon_{2,0} =\frac{1}{\sqrt{3}} \Bigg( 3\frac{z^{2}} -1 \Bigg )
+\end{equation}
+\noindent It follows directly that the components, $u_{i}$ of a Cartesian
+vector $\mathbf{U}$, may be written as:
+\begin{equation}
+v_{1,-1} = \frac{v_{x}-iv_{y}}{\sqrt{2}} \text{\ \ \ }
+v_{1,0}  = t_{z} \text{\ \ \ }
+v_{1,+1} = \frac{v_{x}+iv_{y}}{\sqrt{2}}
+\label{eqn:cart2shl2}
+\end{equation}
+and $l=2$:
+\begin{equation*}
+v_{2,+2} = (v_{x}+iv_{y})^{2}\text{\ \ \ }
+v_{2,-2} = (v_{x}-iv_{y})^{2}
+\end{equation*}
+\begin{equation*}
+v_{2,+1} = 2(v_{x}+iv_{y})v_{z} \text { \ \ \ }
+v_{2,-1} = -2(v_{x}-iv_{y})v_{z} 
+\end{equation*}
+\begin{equation}
+v_{2,0} =\frac{1}{\sqrt{3}} ( 3v_{z}^{2} -1  )
+\label{eqn:cart2shl2}
+\end{equation}
+\noindent A vector operator is just one whose components transform
+as a vector. So the above tells us see how we can define a spherical
+tensor operator from a Cartesian vector operator $\hat{U}$. Unfortunately, 
+in magnetic resonance we are generally concerned with tensor operators
+(an operator is one whose components transform as the corresponding tensor). 
+Fortuntealy, these are formed from the dot product of two vector operators, e.g.,
+\begin{equation}
+\mathbf{\hat{U}}\cdot\mathbf{\hat{V}} =
+ \hat{u}_{x}\hat{v}_{x}+
+ \hat{u}_{y}\hat{v}_{y}+
+ \hat{u}_{z}\hat{v}_{z}
+\end{equation}
+Substituting in the definitions in (\ref{eqn:cart2shl2}) we obtain
+\begin{equation*}
+  \frac{U_{1,-1}-U_{1,1})(V_{1,-1}-V_{1,1})}{2}
+- \frac{(U_{-1,1}+U_{1,1})(V_{1,-1}+V_{1,1})}{2}
++U_{1,0}V_{1,0}
+\end{equation*}
+\begin{equation}
+=U_{1,0}V_{1,0}-U_{1,-1}V_{1,1}-U_{1,1}V_{1,-1}
+\end{equation}
+ Where $t_{i}$ is the coefficient corresponding to the 
+i-component of the tensor operator when represented in the 
+Cartesian co-ordinate system.\\
+
+\noindent It follows directly that the coefficients,
+$\{x^{(l)}_{m}\}^{l = 0, 2}_{m = -l,..,+l}$, used to weight the spherical tensors 
+of Cartesian tensor $\mathbf{T}$ can be defined as
+
+
+\noindent Tensor operators are essentially higher dimensional analogue of
+vector operators; they transform as a tensor under transformations,
+rather than a vector. It's important to note that in the above we
+only have 
+
+
+\noindent We can now connect this to the MR tensors, which
+are usually defined from vector operators of the form
+\begin{equation}
+\mathbf{\hat{V}} = \mathbf{\hat{B}}\otimes\mathbf{\hat{S}}
+=\hat{B}_{x}(\mathbf{S}
+\end{equation}
+where $\mathbf{\hat{B}}$ is some vector (typically an external
+magnetic field), and $\mathbf{\hat{S}}$ is a magnetic magnetic moment
+which arises from the molecule\footnote{I know
+this looks like the formalism associated with the g-tensor, but
+it is general.}. Accordingly,
+we can treat this as three vectors operators; and represent each one
+of these as a linear combination of spherical tensor operators:
+\begin{equation*}
+\mathbf{\hat{V}} = \hat{b}_{x}(\hat{s}_{x}+\hat{s}_{y}+\hat{s}_{z})
+\end{equation*}
+\begin{equation*}
++                 \hat{b}_{y}(\hat{s}_{x}+\hat{s}_{y}+\hat{s}_{z})
+\end{equation*}
+\begin{equation}
++                 \hat{b}_{z}(\hat{s}_{x}+\hat{s}_{y}+\hat{s}_{z})
 \end{equation}
 
+
+ First, we can directly connect the coefficients associated with 
+and MR tensor in the triplet case with the $l=1$ 
+
+
+
+
+($\frac{1}{2}\otimes\frac{1}{2} = 0\oplus1$
 
 \section{Appendix}
 First, the  spin operators represented in the spin product basis (these are the matrices
