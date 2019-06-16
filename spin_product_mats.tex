@@ -438,23 +438,61 @@ decomposition of spaces formed from the product of angular momenta into linear
 combinations of spaces corresponding to a singular angular momenta. The
 elements of a Cartesian tensor operator (CTO) represented on spaces
 corresponding to a single angular momenta will transform as spherical
-harmonics, enabling us to represent these CTOs to a linear combination of
+harmonics, enabling us to represent these CTOs as a linear combination of
 spherical tensor operators (STOs).\\
 
-\noindent This mapping can be accomplised 
- 
-
- of with l=3, such as might be necessary 
-to describe the interaction of 2 particles with unit spin, cannot be said to correspond to a set of s of rank 1.\\
-
-
-whilst a  
-difference in that 
-
-
- Whilst this
-is more physically coherent (as Soncini points out, previous definitions resulted in
-unphysical behaviour in certain contexts), it has a number of 
+\noindent To see how the coefficients $a_{0}$, $\{b_{m}\}_{m=-1,0,1}$ and 
+ $\{c_{m}\}_{m=-2,-1,0,1,2}\}$ may be
+obtained we need to consider how to map between a Cartesian basis $\{x,y,z\}$
+and spherical harmonics. First note transform from Cartesian co-ordinate to 
+spherical ones; 
+\begin{equation}
+cos \theta = \frac{z}{r} \text{\ \ \ }
+sin \theta = \frac{\sqrt{x^{2}+y^{2}}}{r} \text{\ \ \ }
+e^{i\phi} sin\theta  = \frac{x+iy}{r} 
+\end{equation}
+\noindent Then use these definitions to rewrite the spherical harmonics for
+$l=1$ using Cartesian co-ordinates:
+\begin{equation}
+\Upsilon_{1,-1} = \sqrt{\frac{3}{4\pi}}\frac{x-iy}{r\sqrt{2}} \text{\ \ \ }
+\Upsilon_{1,0} = \sqrt{\frac{3}{4\pi}}\frac{z}{r} \text{\ \ \ }
+\Upsilon_{1,+1} = \sqrt{\frac{3}{4\pi}}\frac{x+iy}{r\sqrt{2}}
+\end{equation}
+and $l=2$:
+\begin{equation*}
+\Upsilon_{2,+2} = \sqrt{\frac{15}{32\pi}}\frac{(x+iy)^{2}}{r^{2}} \text{\ \ \ }
+\Upsilon_{2,-2} = \sqrt{\frac{15}{32\pi}}\frac{(x-iy)^{2}}{r^{2}}
+\end{equation*}
+\begin{equation*}
+\Upsilon_{2,+1} = -2\sqrt{\frac{15}{32\pi}}\frac{x+iy}{r^{2}}z \text{\ \ \ }
+\Upsilon_{2,-1} = 2\sqrt{\frac{15}{32\pi}}\frac{x-iy}{r^{2}}z
+ \end{equation*}
+\begin{equation}
+\Upsilon_{2,0} = \frac{1}{\sqrt{3}}
+ \sqrt{\frac{15}{32\pi}}\Bigg( 3 \frac{z^{2}}{r^{2}} -1 \Bigg )
+\end{equation}
+\noindent Without loss of generality we can set $r=1$ 
+\footnote{defining the Cartesian basis such that $|\mathbf{x}|^{2}+|\mathbf{y}|^{2}+|\mathbf{z}|^{2}$ }. Furthermore, spherical Harmonics of different 
+l do not mix under transformations, therefore, the factors common to
+all members of a given l can be absorbed into the coefficients, leaving 
+us with the much nicer definitions
+\begin{equation}
+\Upsilon_{1,-1} = \frac{x-iy}{\sqrt{2}} \text{\ \ \ }
+\Upsilon_{1,0}  = z \text{\ \ \ }
+\Upsilon_{1,+1} = \frac{x+iy}{\sqrt{2}}
+\end{equation}
+and $l=2$:
+\begin{equation*}
+\Upsilon_{2,+2} = (x+iy)^{2}\text{\ \ \ }
+\Upsilon_{2,-2} = (x-iy)^{2}
+\end{equation*}
+\begin{equation*}
+\Upsilon_{2,+1} = 2(x+iy)z \text { \ \ \ }
+\Upsilon_{2,-1} = -2(x-iy)z 
+\end{equation*}
+\begin{equation}
+ \Upsilon_{2,0} =\frac{1}{\sqrt{3}} \Bigg( 3\frac{z^{2}}{r^{2}} -1 \Bigg )
+\end{equation}
 
 
 \section{Appendix}
