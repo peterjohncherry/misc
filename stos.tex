@@ -589,7 +589,7 @@ behaves as though it were an eigenstate $|j,m\rangle$ of the angular momentum op
 $\langle j,m| \hat{T}^{(j_{2})}_{m_{2}} | j_{1}, m_{1} \rangle$ of a representation
 of an ITO, $\hat{T}^{(l)}_{m}$, in a basis  formed from eigenstates of $j$ are
 proportional to the CG-coefficients associated with expanding a coupled
-state, $j_{1}, j_{2}, j,m \rangle $ in terms of uncoupled states
+state, $|j_{1}, j_{2}, j,m \rangle $ in terms of uncoupled states
  $|j_{1},m_{1};j_{2},m_{2} \rangle$.\\
 
 \noindent To see how this is accomplished use the relationship 
@@ -626,15 +626,33 @@ and remember that
 These are identical to the relationships to determine the CG coefficients used to
 expand a coupled state, $|j_{1},j_{2};j, m\rangle$, in terms of uncoupled states,
 $|j_{1},m_{1};j_{2},m_{2}\rangle$
-
 \begin{equation}
-\langle j,m | \hat{T}_{j_{2},m_{2}} | j_{1}, m_{1} \rangle 
+\langle j,m | \hat{T}^{j_{2}}_{m_{2}} | j_{1}, m_{1} \rangle 
  = C_{j_{1}, j_{2}, j,m } (m_{1}, m_{2}) 
  \frac{\langle j || \hat{T} || j_{1} \rangle}
 {\sqrt{2j_{1}+1}}
 \end{equation}
+\noindent By recalling the previously stated coupling conditions arising from the need to conserve total angular momentum, and the projection of the total angular
+momentum on the z-axis we can write
+\begin{equation}
+\langle \hat{T}^{(j_{2})}_{m_{2}} | j_{1}, m_{1}\rangle  =
+\begin{cases}
+X | j,m\rangle
+\text{ \ \ \ iff  \ \ \ }
+|j_{1} -j_{2}| \leq j \leq j_{1}+j_{2}
+\text{ \ and  \ }
+m = m_{1}+m_{2}\\
+0 \text{  \ \ \ \ \ \  \ \ \  \ \ otherwise}
+\end{cases}
+\end{equation}
+\noindent
+where X is just the coefficient defined in from the CG-coeff, $j$, and reduced matrix
+element. In other words, $T^{j_{2}}_{m_{2}}$ effectively couples a state with angular momenta, $j_{2}$ and  $m_{2}$, to the state on which it acts.\\
 
-
+\noindent What this means is that if we first transform our basis to be eigenfunctions of
+$j$ and $j_{z}$, then the representation of our operator on this space
+will be given by $\langle j || \hat{T} || j_{1} \rangle$ 
+% $\hat{T}^{(j_{2}, m_{2}}| j_{q}_{m}$
 %\begin{equation}
 %\langle j, m| \hat{T}^{(j_{2})}_{m_{2}}|j_{1}, m_{1} \rangle = 
 % C_{j_{1},j_{2},j,m}(m_{1}, m_{2})
