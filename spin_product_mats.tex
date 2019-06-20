@@ -31,20 +31,20 @@ s_{1}m_{1}, s_{2}m_{2} \rangle,
 \end{equation}
 
 \noindent the RHS is just a short hand of writing one of the vectors formed
-from the product $\otimes$. From now on this will be referred to as the
-\emph{product basis} . \\
+from the product $|s_{1}m_{1}\rangle \otimes | s_{2}m_{2} \rangle$. From now on this will be referred to as the
+\emph{product basis} or \emph{coupled basis}. \\
 
 \noindent The particles have spin operators denoted $\hat{S}_{1}$ and
 $\hat{S}_{2}$. The product states satisfy
 
-\noindent As $m_{1}  \text{and} m_{2} = \pm \frac{1}{2} $, we shall use the
+\noindent As $m_{1}  \text{ \ and\ } m_{2} = \pm \frac{1}{2} $, we shall use the
 further shorthand, e.g., the product state for $s_{1,2} = \frac{1}{2}$, $m_{1}
-= +\frac{1}{2}$ and $m_{2} = -\frac{1}{2} $ will be written
+= +\frac{1}{2}$  and  $m_{2} = -\frac{1}{2} $ will be written
 \begin{equation}
-|+-\rangle = | \frac{1}{2}\frac{1}{2},\frac{1}{2}\frac{-1}{2} \rangle
+|+-\rangle = \Bigg| \frac{1}{2}\frac{1}{2};\frac{1}{2}\frac{-1}{2} \Bigg\rangle
 \end{equation}
 \begin{equation}
-S^{2}_{i}|s_{1}m_{1}, s_{2}m_{2} \rangle = \hbar^{2}s_{i}(s+1)|s_{1}m_{1}, s_{2}m_{2} \rangle
+S^{2}_{i}|s_{1}m_{1}; s_{2}m_{2} \rangle = \hbar^{2}s_{i}(s+1)|s_{1}m_{1}; s_{2}m_{2} \rangle
 \end{equation}
 \noindent The total angular momentum operator, $\mathbf{S}$, is defined 
 \begin{equation}
@@ -54,19 +54,19 @@ We want to find the eigenvalues of $S_{z}$ and $S^{2}$ in this basis. First, loo
 $S_{z}$.
 \begin{equation}
 S_{z}|++\rangle =
-(S_{1z}+S_{2z})|++ = (\frac{\hbar}{2} + \frac{\hbar}{2}) | ++ rangle = |++\rangle
+(S_{1z}+S_{2z})|++\rangle = \Bigg(\frac{\hbar}{2} + \frac{\hbar}{2}\Bigg) | ++ \rangle = |++\rangle
 \end{equation}
 \begin{equation}
 S_{z}|++\rangle =
-(S_{1z}+S_{2z})|++ = (\frac{-\hbar}{2} + \frac{\hbar}{2}) | -+ rangle = 0
+(S_{1z}+S_{2z})|++\rangle = \Bigg(\frac{-\hbar}{2} + \frac{\hbar}{2}\Bigg) | -+ \rangle = 0
 \end{equation}
 \begin{equation}
 S_{z}|++\rangle =
-(S_{1z}+S_{2z})|++ = (\frac{\hbar}{2} + \frac{-\hbar}{2}) | +- rangle = 0
+(S_{1z}+S_{2z})|++\rangle = \Bigg(\frac{\hbar}{2} + \frac{-\hbar}{2}\Bigg) | +- \rangle = 0
 \end{equation}
 \begin{equation}
 S_{z}|++\rangle = 
-(S_{1z}+S_{2z})|++ = (\frac{-\hbar}{2} + \frac{-\hbar}{2}) | -- \rangle = | -- \rangle
+(S_{1z}+S_{2z})|++\rangle = \Bigg(\frac{-\hbar}{2} + \frac{-\hbar}{2}\Bigg) | -- \rangle = | -- \rangle
 \end{equation}
 So the representation of $\mathbf{S}_{z}$ in the product basis is
 \begin{equation}
@@ -89,17 +89,19 @@ S^{2}_{1}+S^{2}_{2} + 2\mathbf{S}_{1}\cdot \mathbf{S}_{2}
 This leads us to construct the following basis:
 
 \begin{equation*}
+singlet
+\begin{cases}
 \frac{|+-\rangle - | -+ \rangle}{\sqrt{2}}
+\end{cases}
 \end{equation*}
 \\
 \begin{equation*}
-|++\rangle
-\end{equation*}
-\begin{equation*}
-\frac{|+-\rangle - | -+ \rangle}{\sqrt{2}}
-\end{equation*}
-\begin{equation*}
-|--\rangle
+triplet
+\begin{cases}
+|++\rangle\\ \\
+\frac{|+-\rangle + | -+ \rangle}{\sqrt{2}}\\ \\ 
+|--\rangle\\
+\end{cases}
 \end{equation*}
 \noindent I'll refer to this as the "ST basis". The question is now which of
 these two bases should we use. If we are interested in and operator,
@@ -283,9 +285,8 @@ i.e., the space necessary to describe two interacting spins with angular
 momenta $1/2$ is equivalent to the space formed from the states of a spin with
 angular momentum $1$, and a spin with angular momentum $0$. More generally we
 can write
-
 \begin{equation}
-J_{1}\otimes J_{2} = \oplus_{i} j'_{i}
+J_{1}\otimes J_{2} = \bigoplus_{i} j'_{i}
 \end{equation}
 seperating out the space into a sum of a number of other spaces can greatly
 simplify some of the maths, and allow for the derivation of various selection
@@ -300,7 +301,7 @@ states, hence we can write
 |j_{1}m_{1};j_{2},m_{2}\rangle\langle j_{1}m_{1};j_{2},m_{2}|
 j_{1}m_{1};j_{2},m_{2}\rangle 
 \end{equation}
-\noindent where $\rangle\langle
+\noindent where $\langle
 j_{1}m_{1};j_{2},m_{2}|j_{1}m_{1};j_{2},m_{2}\rangle $ are the referred to as
 the Clebsch-Gordon coefficients, i.e., the coefficients which take us from the
 product basis to the coupled basis.\\
@@ -469,7 +470,7 @@ and $l=2$:
  \end{equation*}
 \begin{equation}
 \Upsilon_{2,0} = \frac{1}{\sqrt{3}}
- \sqrt{\frac{15}{32\pi}}\Bigg( 3 \frac{z^{2}} -1 \Bigg )
+ \sqrt{\frac{15}{32\pi}}\Bigg( \frac{3z^{2}-1}{r^{2}} \Bigg )
 \end{equation}
 \noindent Without loss of generality we can set $r=1$ 
 \footnote{defining the Cartesian basis such that $|\mathbf{x}|^{2}+|\mathbf{y}|^{2}+|\mathbf{z}|^{2}$ }. Furthermore, spherical harmonics of different 
@@ -491,7 +492,7 @@ and $l=2$:
 \Upsilon_{2,-1} = -2(x-iy)z 
 \end{equation*}
 \begin{equation}
- \Upsilon_{2,0} =\frac{1}{\sqrt{3}} \Bigg( 3\frac{z^{2}} -1 \Bigg )
+ \Upsilon_{2,0} =\frac{1}{\sqrt{3}} \Bigg( 3 z^{2} -1 \Bigg )
 \end{equation}
 \noindent It follows directly that the components, $u_{i}$ of a Cartesian
 vector $\mathbf{U}$, may be written as:
@@ -511,22 +512,27 @@ v_{2,+1} = 2(v_{x}+iv_{y})v_{z} \text { \ \ \ }
 v_{2,-1} = -2(v_{x}-iv_{y})v_{z} 
 \end{equation*}
 \begin{equation}
-v_{2,0} =\frac{1}{\sqrt{3}} ( 3v_{z}^{2} -1  )
+v_{2,0} =\frac{1}{\sqrt{3}} ( 3_{z}^{2} -1  )
 \label{eqn:cart2shl2}
 \end{equation}
 \noindent A vector operator is just one whose components transform
 as a vector. So the above tells us see how we can define a spherical
-tensor operator from a Cartesian vector operator $\hat{U}$. Unfortunately, 
+tensor operator from a Cartesian vector operator $\hat{U}$. The coefficients
+used to make this transformation are the \emph{Racah coefficients}, 
+tables containing them exist online.\\
+
+\noindent  Unfortunately, 
 in magnetic resonance we are generally concerned with tensor operators
-(an operator is one whose components transform as the corresponding tensor). 
-Fortuntealy, these are formed from the dot product of two vector operators, e.g.,
+(an operator is one whose components transform as the corresponding tensor)
+, not vector operators. 
+Fortunately, these are formed from the dot product of two vector operators, e.g.,
 \begin{equation}
 \mathbf{\hat{U}}\cdot\mathbf{\hat{V}} =
  \hat{u}_{x}\hat{v}_{x}+
  \hat{u}_{y}\hat{v}_{y}+
  \hat{u}_{z}\hat{v}_{z}
 \end{equation}
-Substituting in the definitions in (\ref{eqn:cart2shl2}) we obtain
+\noindent Substituting in the definitions in (\ref{eqn:cart2shl2}) we obtain
 \begin{equation*}
   \frac{U_{1,-1}-U_{1,1})(V_{1,-1}-V_{1,1})}{2}
 - \frac{(U_{-1,1}+U_{1,1})(V_{1,-1}+V_{1,1})}{2}
@@ -535,34 +541,26 @@ Substituting in the definitions in (\ref{eqn:cart2shl2}) we obtain
 \begin{equation}
 =U_{1,0}V_{1,0}-U_{1,-1}V_{1,1}-U_{1,1}V_{1,-1}
 \end{equation}
- Where $t_{i}$ is the coefficient corresponding to the 
+\noindent Where $t_{i}$ is the coefficient corresponding to the 
 i-component of the tensor operator when represented in the 
 Cartesian co-ordinate system.\\
 
-\noindent It follows directly that the coefficients,
-$\{x^{(l)}_{m}\}^{l = 0, 2}_{m = -l,..,+l}$, used to weight the spherical tensors 
-of Cartesian tensor $\mathbf{T}$ can be defined as
+\noindent We can now connect this to the MR tensors. Interestingly,
+it seems that Soncini only applies the conversion to spherical co-ordinates
+to one index of the tensor operator. That is to say, we can think of the 
+MR operators as being a Cartesian vector operator, 
+each component of which is defined using spherical tensor operators.\\
 
-
-\noindent Tensor operators are essentially higher dimensional analogue of
-vector operators; they transform as a tensor under transformations,
-rather than a vector. It's important to note that in the above we
-only have 
-
-
-\noindent We can now connect this to the MR tensors, which
-are usually defined from vector operators of the form
+\noindent To clarify this, I mean that if we have an operators of the form
 \begin{equation}
-\mathbf{\hat{V}} = \mathbf{\hat{B}}\otimes\mathbf{\hat{S}}
-=\hat{B}_{x}(\mathbf{S}
+\mathbf{\hat{V}} = \mathbf{\hat{B}}\otimes\mathbf{\hat{S}},
 \end{equation}
-where $\mathbf{\hat{B}}$ is some vector (typically an external
-magnetic field), and $\mathbf{\hat{S}}$ is a magnetic magnetic moment
+where $\mathbf{\hat{B}}$ is typically an external
+magnetic field, and $\mathbf{\hat{S}}$ is a magnetic moment
 which arises from the molecule\footnote{I know
 this looks like the formalism associated with the g-tensor, but
-it is general.}. Accordingly,
-we can treat this as three vectors operators; and represent each one
-of these as a linear combination of spherical tensor operators:
+it is general.}, then we can treat this as three vector operators;
+and represent each one of these as a linear combination of spherical tensor operators:
 \begin{equation*}
 \mathbf{\hat{V}} = \hat{b}_{x}(\hat{s}_{x}+\hat{s}_{y}+\hat{s}_{z})
 \end{equation*}
@@ -572,19 +570,84 @@ of these as a linear combination of spherical tensor operators:
 \begin{equation}
 +                 \hat{b}_{z}(\hat{s}_{x}+\hat{s}_{y}+\hat{s}_{z})
 \end{equation}
+\noindent 
+\noindent Each one of these can be contributions can be determined by
+the method outlined for vector operators defined above.\\
+
+\section{Ladder operators and ITOs}
+\noindent It is possible to derive the following commutation for the 
+angular momentum operators $J_{z}$ and $J_{\pm}$, and the ITOs $S^{(l)}_{m}$\\
+\begin{equation}
+\begin{cases}
+[\hat{J}_{z}, \hat{T}^{(l)}_{m} ]= m\hat{T}^{(l)}_{m}\\
+[\hat{J}_{\pm}, \hat{T}^{(l)}_{m} ]= \Big(m\sqrt{l(l+1) - m(m\pm1)}\Big)\hat{T}^{(l)}_{m\pm1}
+\end{cases}
+\label{eqn:jtcommutation}
+\end{equation}
+\noindent Inspection of these equations reveals that $\hat{T}^{(j)}_{m}$ is 
+behaves as though it were an eigenstate $|j,m\rangle$ of the angular momentum operator. This leads us to the conclusion that the components,
+$\langle j,m| \hat{T}^{(j_{2})}_{m_{2}} | j_{1}, m_{1} \rangle$ of a representation
+of an ITO, $\hat{T}^{(l)}_{m}$, in a basis  formed from eigenstates of $j$ are
+proportional to the CG-coefficients associated with expanding a coupled
+state, $j_{1}, j_{2}, j,m \rangle $ in terms of uncoupled states
+ $|j_{1},m_{1};j_{2},m_{2} \rangle$.\\
+
+\noindent To see how this is accomplished use the relationship 
+defined in (\ref{eqn:jtcommutation})
+and remember that 
+\begin{equation}
+\hat{J}_{\pm} | j_{1},m_{1}\rangle =
+ \sqrt{j_{1}(j_{1}+1) - m_{1}(m_{1}\pm 1 )} | j_{1}, m_{1}\pm1\rangle
+\end{equation}
+ to write
+\begin{equation}
+\langle j m | [\hat{J}_{\pm}, \hat{T}^{(j_{2})}_{m_{2}} ] | j_{1}, m_{1}\rangle
+\end{equation}
+\begin{equation}
+= \Big(\sqrt{l(l+1) - m(m\pm1)}\Big)
+\langle j m | \hat{T}^{(j_{2})}_{m_{2}} | j_{1}, m_{1}\rangle
+\end{equation}
+\begin{equation}
+= 
+\Big(
+\sqrt{l(l+1) - m(m\mp1)}
+\Big)
+\langle j, m\mp 1 |
+  \hat{T}^{(j_{2})}_{m_{2}}
+ | j_{1}, m_{1}\rangle
++
+\Big(
+\sqrt{l(l+1)\- m(m\pm 1)}
+\Big)
+\langle j, m |
+  \hat{T}^{(j_{2})}_{m_{2}}
+ | j_{1}, m_{1}\pm 1\rangle
+\end{equation}
+These are identical to the relationships to determine the CG coefficients used to
+expand a coupled state, $|j_{1},j_{2};j, m\rangle$, in terms of uncoupled states,
+$|j_{1},m_{1};j_{2},m_{2}\rangle$
+
+\begin{equation}
+\langle j,m | \hat{T}_{j_{2},m_{2}} | j_{1}, m_{1} \rangle 
+ = C_{j_{1}, j_{2}, j,m } (m_{1}, m_{2}) 
+ \frac{\langle j || \hat{T} || j_{1} \rangle}
+{\sqrt{2j_{1}+1}}
+\end{equation}
 
 
- First, we can directly connect the coefficients associated with 
-and MR tensor in the triplet case with the $l=1$ 
-
-
-
-
-($\frac{1}{2}\otimes\frac{1}{2} = 0\oplus1$
+%\begin{equation}
+%\langle j, m| \hat{T}^{(j_{2})}_{m_{2}}|j_{1}, m_{1} \rangle = 
+% C_{j_{1},j_{2},j,m}(m_{1}, m_{2})
+%\frac{\langle j || \hat{T}^{(j_{2})} || j_{1} \rangle}{\sqrt{2j_{1}+1} }
+%\end{equation}
+%\begin{equation}
+%\langle j, m| \hat{T}^{(j_{2})}_{m_{2}}|j_{1}, m_{1} \rangle = 
+%\end{equation}
+%($\frac{1}{2}\otimes\frac{1}{2} = 0\oplus1$
 
 \section{Appendix}
-First, the  spin operators represented in the spin product basis (these are the matrices
-used by EasySpin).
+First, the spin operators represented in the spin product basis (these are the
+matrices used by EasySpin).
 \begin{equation}
 S(x,1) = 
 \begin{bmatrix}
@@ -609,8 +672,8 @@ S(z,1) =
 0                   &   & 1
 \end{bmatrix}
 \end{equation}
-Now for the product operators, $\hat{s}_{i}\otimes\hat{s}_{j}$, represented in the
-spin product basis.
+\noindent Now for the product operators, $\hat{s}_{i}\otimes\hat{s}_{j}$,
+represented in the spin product basis.
 \begin{equation}
 S_{xx} = 
 \begin{bmatrix}
