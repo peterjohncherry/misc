@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{relsize}
+\usepackage{bbold}
+\usepackage{mathtext}
+\usepackage{pdfpages}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ top=25mm,
+ bottom=25mm,
+ right=20mm,
+ }
+\newcommand{\K}{\mathlarger{\mathlarger{\hat{\kappa}}}} 
+
+\begin{document}
+\noindent Define zeroth order Hamiltonian, wavefunction etc.,
+\begin{equation}
+H^{(0)}\Psi_{k}^{(0)} = E_{k}\Psi_{k}^{(0)}
+\end{equation}
+\noindent Define the one electron time reversal operator, $\hat{\kappa}$:
+\begin{equation}
+\hat{\kappa} = -i \hat{C}\sigma_{y}
+\end{equation}
+\noindent where $\hat{C}$ is the complext conjugation operator, and
+$\sigma_{y}$ is the $y$ Pauli matrix. The $N$-electron time reversal operator
+is just defined as 
+\begin{equation*}
+\K = 
+(\hat{\kappa}\otimes 1 \otimes ... \otimes 1)
+\end{equation*}
+\begin{equation*}
+\oplus
+(1 \otimes \hat{\kappa}\otimes  ... \otimes 1)
+\end{equation*}
+\begin{equation}
+\oplus
+...
+(\otimes 1 \otimes  ... \otimes \hat{\kappa})
+\end{equation}
+\noindent Have Kramer's pair relations
+\begin{equation}
+\K \Psi_{k} = \overline{\Psi}_{k}
+\K \overline{\Psi}_{k} = \K\K\Psi_{k} = (-1)^{N_{e}} \Psi_{k}
+\end{equation}
+\noindent i.e., $\Psi$ and $\overline{\Psi}$ form a doublet.  The dependence
+of the sign on the number of electrons, $N_{e}$, is important. The above relation 
+holds in both a relativistic and non-relativistic framework.\\
+
+\noindent Note that the zeroth order Hamiltonian, $\hat{H}^{(0)}$ commutes with the time reversal operator, $\K$.
+\begin{equation}
+[\K, \hat{H} ] = 0 
+\end{equation}
+\noindent However, the Zeeman Hamiltonian, $\hat{H}^{Zee}$, anti-commutes:
+\begin{equation}
+\{\K, \hat{H} \} = 0 
+\end{equation}
+\noindent 
+
+\noindent We can use this property of the time reversal operator to demonstrate
+that $\Psi$ is orthorgonal to its Kramers pair, $\overline{\Psi}$\\
+\begin{equation}
+\langle \Psi | \overline\Psi  \rangle=
+\langle \Psi |\K \Psi  \rangle=
+\langle \Psi | \K^{\dagger}\K\K\Psi  \rangle=
+\langle \overline{\Psi} | \K^{2}\Psi  \rangle=
+-\langle \overline{\Psi} | \Psi  \rangle
+\end{equation}
+\begin{equation}
+\langle \Psi | \overline\Psi  \rangle=
+-\langle \overline{\Psi} | \Psi  \rangle 
+\text{ \ \ \ \ } \rightarrow \text{ \ \ \ \ }
+\langle \Psi | \overline\Psi  \rangle= 0
+\end{equation}
+\noindent If $\Psi$ and $\overline{\Psi}$ are orthogonal they
+must be different states.\\
+
+\noindent We can use these relations to determine some important 
+properties of the spin Hamiltonian
+used to describe a doublet system with an odd number of electrons.
+Consider the case of  the Zeeman Hamiltonian $\hat{H^{Zee}}$;
+ a one electron operator which is anti-symmetric under time reversal 
+\begin{equation*}
+g_{uv}\sigma_{u} =
+[\hat{H}_{u}^{Zee}]_{\{\Psi, \overline{\Psi}\}} = 
+\begin{bmatrix}
+\langle \Psi | \hat{H}^{Zee}_{u} |\Psi  \rangle &
+\langle \Psi | \hat{H}^{Zee}_{u} | \overline{\Psi}  \rangle
+\\ 
+\langle \overline{\Psi} | \hat{H}^{Zee}_{u} | \Psi  \rangle &
+\langle \overline{\Psi} | \hat{H}^{Zee}_{u} | \overline\Psi  \rangle
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+=
+\begin{bmatrix}
+\langle \Psi | \hat{H}^{Zee}_{u}   | \Psi  \rangle &
+\langle \Psi | \hat{H}^{Zee}_{u}\K | \Psi  \rangle
+\\ 
+\langle \Psi |\K^{\dagger} \hat{H}^{Zee}_{u} | \Psi  \rangle &
+\langle \Psi |\K^{\dagger} \hat{H}^{Zee}_{u} \K | \Psi  \rangle
+\end{bmatrix}
+\end{equation*}
+\noindent First consider the diagonal elements. Noting
+that $\hat{H}^{Zee}_{u}$ is antisymmetric under time 
+reversal, i.e., $\K^{\dagger} \hat{H}^{Zee}_{u} \K = - \hat{H}^{Zee}_{u}$,
+we find 
+\begin{equation}
+\langle \Psi | \hat{H}^{Zee}_{u}   | \Psi  \rangle 
+= -\langle \overline \Psi | \hat{H}^{Zee}_{u} | \overline \Psi  \rangle.
+\end{equation}
+\noindent In the case of the off diagonal elements we can
+use the fact that, for odd numbered electrons, $\K^{dagger}\K = 1$,
+and that $\K$ anticommutes with the Hamiltonian . Which
+when inserted into one of the BraKets yields 
+\begin{equation}
+\langle \Psi | \hat{H}^{Zee}_{u} | \overline{\Psi}  \rangle
+=
+\langle \Psi | \hat{H}^{Zee}_{u} \K| \Psi  \rangle
+=
+\langle \Psi | \K^{\dagger} \hat{H}^{Zee}_{u} | \Psi  \rangle^{*} 
+=
+\langle \overline{\Psi} | \hat{H}^{Zee}_{u} | \Psi \rangle^{*} 
+\end{equation}
+\noindent So the spin Hamiltonian is Hermitian. This means it is possible to
+represent the spin Hamiltonian using only the three Pauli matrices, $\sigma_{y}$,
+$\sigma_{x}$, and $\sigma_{z}$.\\
+
+\noindent Things become more complicated when we consider 
+doublet systems where there is an even number of electrons. In this case
+\begin{equation}
+\K^{2}|\Phi\rangle = |\Phi\rangle
+\end{equation}
+\noindent Begin by considering the case of a triplet (two unpaired electrons).
+We shall begin by taking the case of a triplet state, where the tree states
+are defined as
+\begin{equation}
+\Psi_{1,1} = | \alpha, \alpha\rangle
+\end{equation}
+\begin{equation}
+\Psi_{1,0} = \frac{1}{\sqrt{2}}|( \alpha\beta\rangle -| \beta\alpha\rangle)
+\end{equation}
+\begin{equation}
+\Psi_{1,-1} = | \beta, \beta\rangle
+\end{equation}
+\noindent where the left subscript labels the multiplet, and the
+right subscript the projection of spin angualr momentum on the z-axis.
+The representation of the one-electron Zeeman operator in this basis is
+\begin{equation}
+\begin{bmatrix}
+\langle 1,1 | \hat{H}^{Zee}_{u} | 1,1  \rangle&
+\langle 1,1 | \hat{H}^{Zee}_{u} | 1,0  \rangle&
+\langle 1,1 | \hat{H}^{Zee}_{u} | 1,-1  \rangle
+\\ 
+\langle 1,0 | \hat{H}^{Zee}_{u} | 1,1    \rangle&
+\langle 1,0 | \hat{H}^{Zee}_{u} | 1,0    \rangle&
+\langle 1,0 | \hat{H}^{Zee}_{u} | 1,-1   \rangle
+\\ 
+\langle 1,-1 | \hat{H}^{Zee}_{u} | 1,1    \rangle& 
+\langle 1,-1 | \hat{H}^{Zee}_{u} | 1,0    \rangle&
+\langle 1,-1 | \hat{H}^{Zee}_{u} | 1,-1   \rangle
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+=
+\begin{bmatrix}
+\langle 1,1 |            \hat{H}^{Zee}_{u}   | 1,1  \rangle&
+\langle 1,1 |            \hat{H}^{Zee}_{u}   | 1,0  \rangle&
+\langle 1,1 |            \hat{H}^{Zee}_{u}\K | 1,1  \rangle
+\\                       
+\langle 1,0 |            \hat{H}^{Zee}_{u}   | 1,1   \rangle&
+\langle 1,0 |            \hat{H}^{Zee}_{u}   | 1,0   \rangle&
+\langle 1,0 |            \hat{H}^{Zee}_{u}\K | 1,1   \rangle
+\\ 
+\langle 1,1 |\K^{\dagger} \hat{H}^{Zee}_{u}   | 1,1   \rangle& 
+\langle 1,1 |\K^{\dagger} \hat{H}^{Zee}_{u}   | 1,0   \rangle&
+\langle 1,1 |\K^{\dagger} \hat{H}^{Zee}_{u}\K | 1,1   \rangle
+\end{bmatrix}
+\end{equation}
+First we have
+\begin{equation}
+\langle 1,1 |            \hat{H}^{Zee}_{u}   | 1,1  \rangle
+=\langle 1,1 |\K^{\dagger} \hat{H}^{Zee}_{u}\K | 1,1   \rangle
+=-\langle 1,1 |\hat{H}^{Zee}_{u}| 1,1  \rangle
+\end{equation}
+\noindent We can also note 
+\begin{equation*}
+\langle 1,1 | \hat{H}^{Zee}_{u} | 1,-1  \rangle
+=
+  \langle 1,1 |                  \hat{H}^{Zee}_{u}\K | 1,1  \rangle
+\end{equation*}
+\begin{equation}
+= \langle 1,1 |\K^{\dagger}\K^{\dagger} \hat{H}^{Zee}_{u}\K   | 1,1  \rangle
+= - \langle 1,-1 |\hat{H}^{Zee}_{u} | 1,1  \rangle
+\end{equation}
+\noindent In order to simplify things we can use the transformation
+\begin{equation}
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 &  i \\ 
+1 & -i 
+\end{bmatrix}
+\begin{bmatrix}
+\Psi_{1}\\
+\Psi_{-1}
+\end{bmatrix}
+\end{equation}
+\end{document}
