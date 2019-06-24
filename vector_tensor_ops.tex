@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{relsize}
+\usepackage{bbold}
+\usepackage{mathtext}
+\usepackage{pdfpages}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ top=25mm,
+ bottom=25mm,
+ right=20mm,
+ }
+
+\begin{document}
+\noindent I think of a vector space, $V$, as being defined by a map.
+\begin{equation}
+V : E \rightarrow \mathbb{C}^{n}
+\end{equation}
+\noindent each $\mathbf{v} \in V$, the tuple $c\in \mathbb{C}$ used to represent
+$v$ on $E$.\\
+
+\noindent To determine the components of reprentation, i.e., the tuple, $c$, corresponding
+to a given vector, $v$, we can define a function, $v(e)$,
+which maps from a member, $e \in E$, to a number $c \in \mathbb{C}$.
+\begin{equation}
+v :  e \rightarrow c \text{ \  \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ }  e\in E \text{ \ \ }c \in \mathbb{C} \text{\ \ \ } v \in V 
+\end{equation}
+\noindent To see why, consider a vector $\mathbf{v}$ defined on a basis $E$
+\begin{equation}
+\mathbf{v} = \sum_{i=1}^{dim(E)} v(\mathbf{e}_{i}) \mathbf{e}_{i} = \sum_{i=1}^{dim(E)} v_{i} \mathbf{e}_{i}
+\end{equation}
+\noindent In other words, $v_{i}$, is just shorthand for $v(\mathbf{e}_{i})$.\\
+
+\noindent As an example take a 3-dimensional vector, $\mathbf{w}$, represented
+on the Cartesian basis, $E = \{\mathbf{x},\mathbf{y},\mathbf{z}\}$ :
+\begin{equation}
+\mathbf{w} = w(\mathbf{x})\mathbf{x}+w(\mathbf{y})\mathbf{y}+w(\mathbf{z})\mathbf{z}
+ = w_{x}\mathbf{x}+w_{y}\mathbf{y}+w_{z}\mathbf{z}
+\end{equation}
+\noindent note the coeffients $\{w_{x},w_{y},w_{z}\}\in \mathbb{C}^{3}$, although
+if we are talking about Cartesian vectors we assume the values of these coefficients
+to be real, so the tuple is in $\mathbb{R}^{3}$.\\
+
+\noindent Usually we think of $v(e_{i})$, as being a projection of
+vector $\mathbf{v}$ represented on , onto the onto the basis functions $\mathbf{e}$. 
+Essentially, the dual, $v*$, of $v$, is defined as the tuple of functions which map 
+from the members of the basis, $E$, to the coefficients of $v$ represented on this basis.\\
+
+\noindent A vector operator is one which that transforms like a vector.
+For example, if we have a vector operator $a\in A$, we can
+define it on an basis $B$, were the members of $\hat{b}$ are 
+themselves operators, e.g., for a Cartesian vector operator
+\begin{equation}
+\mathbf{\hat{a}}  = a_{x}\hat{b}_{x}+a_{y}\hat{b}_{y}+a_{z}\hat{b}_{z}
+\end{equation}
+here $\{a_{i}\}_{i=x,y,z}$ are just coefficients. A rotation, $\hat{R}$, of the
+co-ordinate system on which $\hat{a}$ 
+\begin{equation}
+\hat{a}' = \hat{R}\hat{a}
+\end{equation}
+can be effected by a transformation of the components $\{a_{i}\}_{i=x,y,z}$
+\begin{equation}
+\hat{a}_{i'} = \sum_{j=x,y,z} R_{ij} a_{j}
+\end{equation}
+\noindent where $R_{ij}$ is are the components of the operator used to
+effect rotations on the space Cartesian basis $\{x,y,z\}$. \\
+
+
+
+then a rotation on the space $$
+
+ which can be defined on a vector
+space $E = {e_{x},e_{y},e_{z}}$, then applying a rotation \hat{R} to members of the basis
+\begin{equation}
+
+\edn
+$$
+the members of the 
+\begin{equation}
+\hat{a} = \sum_{i=x,y,z} \hat{a}_{x}
+\end{equation}
+\
+ In a similar vein, we could define a vector operator, $\tilde{A}$, which
+takes two vectors. 
+
+ with
+coefficients $\{\tilde{a}_{i}\}_{i=x,y,z}$. Now define a member of $a\in A$ represented
+on the space of
+ all complex, Hermtian, 2$\times$2 matrics, $H_{2}(\mathbf{C})$. 
+\begin{equation}
+[a]_{H_{2\times 2}} = 
+\begin{bmatrix}
+
+\end{bmatrix}
+\end{equation}
+
+ 
+\noindent So the components of a representation, $[v]_{E}$ of a vector $v\in V$  on a basis $E$ is 
+\begin{equation}
+[v]_{E} = \sum v_{i}(e_{i}) = c_{i}
+\end{equation}
+
+\noindent The map corresponding to an n-dimensional vector takes use from one space, $E$, (which can
+be thought of as the basis), to the space of all $n$-tuples of complex numbers, $\mathbb{C}^{n}$,
+which can be thought of as the coefficients of the vectors.
+So
+\begin{equation}
+v(e^{i}) \rightarrow v_{i}
+\end{equation}
+For reasons of simplicity 
+
+\begin{equation}
+v(e_{i}) = 
+\end{equation}
+
+
+\end{document}
